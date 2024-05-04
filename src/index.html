@@ -1,0 +1,539 @@
+---
+title: 'Nehalem Bay Fishing | Northwest Oregon | Hammerhead Guide Service'
+description: 'Captain Jason offers Nehalem Bay fishing charters that target Salmon, Steelhead, Sturgeon, Smallmouth Bass, Lingcod, Shad, and also offers Crabbing charters.'
+preloadImg: ''
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+{% from "components/cta.html" import cta %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/critical-above-fold.css">
+    <link rel="stylesheet" href="/css/home.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/css/home.css">
+    </noscript>
+    <link rel="stylesheet" href="/css/components.css">
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+
+    <link rel="preload" as="image" href="/assets/images/home-1.webp">
+    <link rel="preload" as="image" href="/assets/images/home-2.webp">
+    <link rel="preload" href="/assets/images/home-3.webp" as="image">
+
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                home-hero                     -->
+    <!-- ============================================ -->
+    <section id="home-wrapper">
+        <div class="Section_top">
+            <div class="tint"></div>
+            <div class="slideshow-container">
+                <picture class="slide fade">
+                    <source srcset="/assets/images/home-1.webp" type="image/webp">
+                    <img src="/assets/images/home-1.jpg" style="width:100%" alt="Image 1">
+                </picture>
+                <picture class="slide fade">
+                    <source srcset="/assets/images/home-2.webp" type="image/webp">
+                    <img src="/assets/images/home-2.jpg" style="width:100%" alt="Image 2">
+                </picture>
+                <picture class="slide fade">
+                    <source srcset="/assets/images/home-3.webp" type="image/webp">
+                    <img src="/assets/images/home-3.jpg" style="width:100%" alt="Image 3">
+                </picture>
+                <picture class="slide fade">
+                    <source srcset="/assets/images/home-4.webp" type="image/webp">
+                    <img src="/assets/images/home-4.jpg" style="width:100%" alt="Image 4">
+                </picture>
+                <picture class="slide fade">
+                    <source srcset="/assets/images/home-5.webp" type="image/webp">
+                    <img src="/assets/images/home-5.jpg" style="width:100%" alt="Image 5">
+                </picture>
+                <picture class="slide fade">
+                    <source srcset="/assets/images/home-6.webp" type="image/webp">
+                    <img src="/assets/images/home-6.jpg" style="width:100%" alt="Image 6">
+                </picture>
+            </div>
+            <div class="content">
+                <h1 class="cs-hero-title">
+                    Nehalem Bay<br><span class="second-line">Fishing</span>
+                </h1>
+                <p class="cs-text">Embark on a thrilling fishing journey in Nehalem Bay with Hammerhead Guide Service. Led by Captain Jason Rice, a seasoned angler with deep roots in Oregon's waters, we promise an unparalleled fishing experience tailored to your preferences. From the vast Pacific Ocean to the intricate waterways of the Columbia River Basin, our charters span a diverse range of fishing grounds.</p>
+                <div class="two-buttons">
+                    <a href="/contact/" class="button-solid">Contact Us</a>
+                    <a href="#services" class="button-solid price-btn">Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("slide");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex-1].style.display = "block";
+                // Change image every 2 seconds (2000ms)
+                setTimeout(showSlides, 6300);
+            }
+            
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Get the button with the class "price-btn"
+            const button = document.querySelector('.price-btn');
+
+            if (button) {
+                // Add a click event listener to the button
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent the default button behavior
+                    const targetId = button.getAttribute('href'); // Get the target section id
+
+                    // Get the target section element
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Calculate the offset by subtracting the desired offset value (in pixels)
+                        // from the element's offsetTop
+                        const offset = targetElement.offsetTop - 50; // Replace 'yourOffsetValue' with the desired offset value
+
+                        // Scroll smoothly to the target section with the offset
+                        window.scrollTo({
+                            top: offset,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+    <!-- ============================================ -->
+    <!--                 about-us                     -->
+    <!-- ============================================ -->
+    <section id="about" class="cs-section">
+        <div class="cs-container">
+            <div class="image-group">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 699px)" srcset="/assets/images/about-sturgeon.webp">
+                    <source media="(min-width: 700px)" srcset="/assets/images/about-sturgeon.webp">
+                    <img decoding="async" loading="lazy" src="/assets/images/about-sturgeon.png" alt="" width="779" height="542">
+                </picture>
+            </div>
+            <div class="text-content">
+                <span class="topper">About Us</span>
+                <h2 class="cs-title">Hammerhead<br><span class="text-highlight">Guide</span> Service</h2>
+                <p class="cs-text">Hammerhead Guide Service isn't just another fishing charter—it's a testament to Captain Jason Rice's lifelong passion for fishing. Growing up, Jason seized every opportunity to venture into the wilderness, honing his skills and deepening his love for the sport. Today, he extends this passion to anglers of all skill levels, from novices to experts.</p>
+                <p class="cs-text button-bellow">Nehalem Bay, with its rich infusion of freshwater, is a haven for marine life, making it a prime spot for fishing enthusiasts. Whether you're keen on chasing <a class="text-highlight-link" href ="/summer-and-fall-salmon/">Salmon</a>, <a class="text-highlight-link" href ="/winter-steelhead/">Steelhead</a>, <a class="text-highlight-link" href ="/sturgeon/">Sturgeon</a>, or even indulging in some <a class="text-highlight-link" href ="/nehalem-bay-crabbing/">Crabbing</a>, Captain Jason has got you covered.</p>
+                <a href="/about-us/" class="button-solid">About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Our Services                 -->
+    <!-- ============================================ -->
+    <section id="services" class="cs-section">
+        <div class="cs-container">
+            <h2 class="cs-title">Services</h2>
+            <div class="navbar">
+                <div class="navbar-row">
+                    <a class="service-link active" href="#" data-service="salmon">Salmon</a>
+                    <a class="service-link" href="#" data-service="sturgeon">Sturgeon</a>
+                    <a class="service-link" href="#" data-service="bottom-fish">Bottom Fish</a>
+                </div>
+                <div class="navbar-row">
+                    <a class="service-link" href="#" data-service="steelhead">Steelhead</a>
+                    <a class="service-link" href="#" data-service="crabbing">Crabbing</a>
+                    <a class="service-link" href="#" data-service="shad">Shad</a>
+                </div>
+            </div>
+            <div class="service-content">
+                <!-- Replace the content within each service section -->
+                <div id="salmon" class="service">
+                    <div class="text-content">
+                        <h3 class="cs-sub-title">Chase the Mighty <span class="text-highlight">Salmon</span></h3>
+                        <p class="cs-text">Dive into the world of Salmon fishing with Hammerhead Guide Service. Our charters, beginning in June or July, offer anglers the chance to catch pristine <a class="text-highlight-link" href ="/summer-and-fall-salmon/">Chinook Salmon in the serene waters of Nehalem and Tillamook Bays</a>. For those seeking a unique thrill, we also venture into the Pacific Ocean, targeting both Coho and Chinook Salmon. The ocean's vast expanse, when conditions are favorable, promises an unparalleled fishing experience. And for those who wish to combine their Salmon fishing adventure, we offer <a class="text-highlight-link" href ="/nehalem-bay-crabbing/">combined trips with bottom fishing and Nehalem Bay crabbing.</a></p>
+                        <a href="/summer-and-fall-salmon/" class="button-solid">Salmon Adventures</a>
+                    </div>
+                    <div class="image-group">
+                        <picture class="cs-picture cs-picture1">
+                            <source media="(max-width: 699px)" srcset="/assets/images/service-salmon.webp">
+                            <source media="(min-width: 700px)" srcset="/assets/images/service-salmon.webp">
+                            <img decoding="async" loading="lazy" src="/assets/images/service-salmon.png" alt="" width="720" height="693">
+                        </picture>
+                    </div>
+                </div>
+
+                <div id="sturgeon" class="service">
+                    <div class="text-content">
+                        <h3 class="cs-sub-title">The Majestic <span class="text-highlight">Sturgeon</span> Awaits</h3>
+                        <p class="cs-text">The waters of Nehalem Bay are home to the magnificent Sturgeon, a prized catch among anglers. With Captain Jason's expertise, you'll navigate the bay's depths, learning the art of Sturgeon fishing and experiencing the thrill of the catch. It's not just about the fishing; it's about understanding the habitat, the behavior, and the challenge that Sturgeon presents.</p>
+                        <a href="/sturgeon/" class="button-solid">Sturgeon Fishing</a>
+                    </div>
+                    <div class="image-group">
+                        <picture class="cs-picture cs-picture1">
+                            <source media="(max-width: 699px)" srcset="/assets/images/services-sturgeon.webp">
+                            <source media="(min-width: 700px)" srcset="/assets/images/services-sturgeon.webp">
+                            <img decoding="async" loading="lazy" src="/assets/images/services-sturgeon.png" alt="" width="689" height="850">
+                        </picture>
+                    </div>
+                </div>
+
+                <div id="bottom-fish" class="service">
+                    <div class="text-content">
+                        <h3 class="cs-sub-title">Discover the Ocean's Hidden Treasures</h3>
+                        <p class="cs-text">The ocean floor is teeming with life, and with Hammerhead Guide Service, you get to explore this underwater world. Targeting species like Lingcod, Rockfish, and more, our bottom fishing charters promise both excitement and a bountiful catch. With Captain Jason guiding the way, you'll learn the intricacies of bottom fishing, ensuring a rewarding experience.</p>
+                        <a href="/about-us/" class="button-solid">Bottom Fishing</a>
+                    </div>
+                    <div class="image-group">
+                        <picture class="cs-picture cs-picture1">
+                            <source media="(max-width: 699px)" srcset="/assets/images/services-bottom-fish.webp">
+                            <source media="(min-width: 700px)" srcset="/assets/images/services-bottom-fish.webp">
+                            <img decoding="async" loading="lazy" src="/assets/images/services-bottom-fish.png" alt="" width="681" height="850">
+                        </picture>
+                    </div>
+                </div>
+
+                <div id="steelhead" class="service">
+                    <div class="text-content">
+                        <h3 class="cs-sub-title">Pursue the Elusive <span class="text-highlight">Steelhead</span></h3>
+                        <p class="cs-text">Steelhead, a treasured catch, offers anglers a unique challenge. At Hammerhead Guide Service, we guide you through the waters of Nehalem Bay, sharing techniques, tips, and insights to help you catch this prized fish. With Captain Jason's vast experience, you're in for an adventure that's both educational and exhilarating.</p>
+                        <a href="/winter-steelhead/" class="button-solid">Steelhead Fishing</a>
+                    </div>
+                    <div class="image-group">
+                        <picture class="cs-picture cs-picture1">
+                            <source media="(max-width: 699px)" srcset="/assets/images/services-steelhead.webp">
+                            <source media="(min-width: 700px)" srcset="/assets/images/services-steelhead.webp">
+                            <img decoding="async" loading="lazy" src="/assets/images/services-steelhead.png" alt="" width="599" height="787">
+                        </picture>
+                    </div>
+                </div>
+
+                <div id="crabbing" class="service">
+                    <div class="text-content">
+                        <h3 class="cs-sub-title">Dive into the World of <span class="text-highlight">Crabbing</span></h3>
+                        <p class="cs-text">Nehalem Bay's waters are rich with crabs, making it a hotspot for crabbing enthusiasts. Our crabbing charters are designed to offer a hands-on experience, from setting the traps to hauling in your catch. Perfect for families and groups, crabbing with Captain Jason is as much about the fun as it is about the catch.</p>
+                        <a href="/nehalem-bay-crabbing/" class="button-solid">Crab Adventures</a>
+                    </div>
+                    <div class="image-group">
+                        <picture class="cs-picture cs-picture1">
+                            <source media="(max-width: 699px)" srcset="/assets/images/services-crab.webp">
+                            <source media="(min-width: 700px)" srcset="/assets/images/services-crab.webp">
+                            <img decoding="async" loading="lazy" src="/assets/images/services-crab.png" alt="" width="689" height="850">
+                        </picture>
+                    </div>
+                </div>
+
+                <div id="shad" class="service">
+                    <div class="text-content">
+                        <h3 class="cs-sub-title">The Seasonal Delight: <span class="text-highlight">Shad</span> Fishing</h3>
+                        <p class="cs-text">Shad fishing is a seasonal adventure that promises both fun and a great catch. With Hammerhead Guide Service, you'll explore the best spots in Nehalem Bay to catch Shad, guided by Captain Jason's expertise. It's a fishing experience that's both unique and rewarding, making it a must-try for all fishing enthusiasts.</p>
+                        <a href="/shad-fishing/" class="button-solid">Shad Fishing</a>
+                    </div>
+                    <div class="image-group">
+                        <picture class="cs-picture cs-picture1">
+                            <source media="(max-width: 699px)" srcset="/assets/images/services-shad.webp">
+                            <source media="(min-width: 700px)" srcset="/assets/images/services-shad.webp">
+                            <img decoding="async" loading="lazy" src="/assets/images/services-shad.png" alt="" width="681" height="850">
+                        </picture>
+                    </div>
+                </div>
+
+                <!-- Repeat this structure for other services -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================ -->
+    <!--              Family Friendly                 -->
+    <!-- ============================================ -->
+    <section id="family-friendly" class="cs-section">
+        <div class="cs-container">
+            <div class="image-group">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 699px)" srcset="/assets/images/family-friendly.webp">
+                    <source media="(min-width: 700px)" srcset="/assets/images/family-friendly.webp">
+                    <img decoding="async" loading="lazy" src="/assets/images/family-friendly.png" alt="" width="692" height="672">
+                </picture>
+            </div>
+            <div class="text-content">
+                <h2 class="cs-title"><span class="text-highlight">Family Friendly</span><br>Fishing Guide</h2>
+                <p class="cs-text button-bellow">At Hammerhead Guide Service, we believe that fishing is more than just a sport—it's a bonding experience. Our charters are designed with families in mind, ensuring safety, fun, and a learning experience for all ages. Whether it's your child's first catch or a family day out in the waters, we promise memories that will last a lifetime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Youtube                    -->
+    <!-- ============================================ -->
+    <section id="youtube" class="cs-section">
+        <div class="cs-container">
+            <h2 class="cs-title">Watch</h2>
+            <div class="video-wrapper">
+                <div style="width: 100%; max-width: 550px; box-shadow: 6px 6px 10px hsl(206.5, 0%, 75%);">
+                    <div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden;">
+                        <iframe 
+                        style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+                        loading="lazy"
+                        srcdoc="<style>
+                            * {
+                            padding: 0;
+                            margin: 0;
+                            overflow: hidden;
+                            }
+                            
+                            body, html {
+                            height: 100%;
+                            }
+                            
+                            img, svg {
+                            position: absolute;
+                            width: 100%;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            }
+                            
+                            svg {
+                            filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+                            transition: all 250ms ease-in-out;
+                            }
+                            
+                            body:hover svg {
+                            filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+                            transform: scale(1.2);
+                            }
+                        </style>
+                        <a href='https://www.youtube.com/embed/u8HT8OTIQQo?autoplay=1'>
+                            <img src='/assets/images/youtube-thumbnail-1.jpg' alt='Willamette River Smallmouth Bass & Clackamas River Coho Salmon'>
+                            <svg src='/assets/svgs/play-circle.svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+                        </a>
+                        "
+                        src="https://www.youtube.com/embed/u8HT8OTIQQo" 
+                        title="Willamette River Smallmouth Bass & Clackamas River Coho Salmon"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="video-text"> Garibaldi Marina <span class="text-highlight">Grocery Run</span> Adventure with Jason</p>
+                </div>
+                <div style="width: 100%; max-width: 550px; box-shadow: 6px 6px 10px hsl(206.5, 0%, 75%);">
+                    <div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden;">
+                        <iframe 
+                        style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+                        loading="lazy";
+                        srcdoc="<style>
+                            * {
+                            padding: 0;
+                            margin: 0;
+                            overflow: hidden;
+                            }
+                            
+                            body, html {
+                            height: 100%;
+                            }
+                            
+                            img, svg {
+                            position: absolute;
+                            width: 100%;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            }
+                            
+                            svg {
+                            filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+                            transition: all 250ms ease-in-out;
+                            }
+                            
+                            body:hover svg {
+                            filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+                            transform: scale(1.2);
+                            }
+                        </style>
+                        <a href='https://www.youtube.com/embed/KioHNRPVLQg?si=84Vk1Jskbz6fHxkv?autoplay=1'>
+                            <img src='/assets/images/youtube-thumbnail-2.jpg' alt='Oregon Coast CR Salmon Fishing'>
+                            <svg src='/assets/svgs/play-circle.svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+                        </a>
+                        "
+                        src="https://www.youtube.com/embed/KioHNRPVLQg?si=84Vk1Jskbz6fHxkv" 
+                        title="Oregon Coast CR Salmon Fishing"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class = "video-text">Columbia River <span class ="text-highlight"><br>Salmon Mastery</span> with Jason</p>
+                </div>  
+                <div style="width: 100%; max-width: 550px; box-shadow: 6px 6px 10px hsl(206.5, 0%, 75%);">
+                    <div style="position: relative; padding-bottom: 56.15%; height: 0; overflow: hidden;">
+                        <iframe 
+                        style="position: absolute; top: 0; left:0; width: 100%; height: 100%; border: 0;"
+                        loading="lazy";
+                        srcdoc="<style>
+                            * {
+                            padding: 0;
+                            margin: 0;
+                            overflow: hidden;
+                            }
+                            
+                            body, html {
+                            height: 100%;
+                            }
+                            
+                            img, svg {
+                            position: absolute;
+                            width: 100%;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            }
+                            
+                            svg {
+                            filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+                            transition: all 250ms ease-in-out;
+                            }
+                            
+                            body:hover svg {
+                            filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+                            transform: scale(1.2);
+                            }
+                        </style>
+                        <a href='https://www.youtube.com/embed/OumOMrOPjwM?si=wZOcaDfloHpLQ8_m?autoplay=1'>
+                            <img src='/assets/images/youtube-thumbnail-3.jpg' alt='Jig Fishing Willamette River Springers & Yuba River Stripers'>
+                            <svg src='/assets/svgs/play-circle.svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+                        </a>
+                        "
+                        src="https://www.youtube.com/embed/OumOMrOPjwM?si=wZOcaDfloHpLQ8_m" 
+                        title="Jig Fishing Willamette River Springers & Yuba River Stripers"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class = "video-text"><span class ="text-highlight">Spring Chinook</span> Pursuit on Willamette with Jason Rice</p>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                Reviews                 -->
+    <!-- ============================================ -->
+    <section id="reviews" class="cs-section">
+        <div class="cs-container">
+            <h2 class="cs-title">Testimonials</h2>
+            <p class="cs-text sub-heading">Over 45+ positive reviews and counting.</p>
+            <div class="bottom-reviews">
+                <div class="row">
+                    <div class="review-wrapper">
+                        <p class="cs-text">"Great time out of Garibaldi this Memorial weekend. Limited out on rockfish in a couple hours! Snaged up a few good sized dungies as well. Jason turned a not so nice day into a great fishing trip! We'll be back soon. Thank you!"</p>
+                        <div class="bottom-section">
+                            <span class="author">Kyle Ellsworth</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                    <div class="review-wrapper">
+                        <p class="cs-text">"Jason manages details and expectations so well no matter if you are experienced or a beginner!  Great experience for me and my friends on a girls retreat!"</p>
+                        <div class="bottom-section">
+                            <span class="author">Laurie Vizzini</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                    <div class="review-wrapper">
+                        <p class="cs-text">"Fishing with Jason is a great experience. He knows the waters well and always works hard to get you whatever you are fishing for."</p>
+                        <div class="bottom-section">
+                            <span class="author">Matthew Beeman</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="review-wrapper">
+                        <p class="cs-text">"Jason is a great, unassuming guide, as well as a really enjoyable, generous, flexible guy. We've been out a number of times on various rivers with different pals, and he's tolerated us all while getting us into all the right holes and onto some excellent fish.  This included days when others weren't catchin' em and we we were... You're guaranteed to receive his best effort and robust enthusiasm, no matter the conditions."</p>
+                        <div class="bottom-section">
+                            <span class="author">Jeff Joslin</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                    <div class="review-wrapper">
+                        <p class="cs-text">"Been out with Jason and staff many times over the last several years. The guy is a class act with a great attitude and highly educated on all the fisheries he fishes. Whether steelhead, salmon (river or ocean) lings/rock fish or sturgeon, you’ll have a great time on a clean boat!"</p>
+                        <div class="bottom-section">
+                            <span class="author">Bryan Rivers</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="review-wrapper">
+                        <p class="cs-text">"Every trip out with Jason my family and I have a great time catching fish. From spring chinook to winter steelhead. Sometimes we get the added bonus of his son Charlie who is such a fun kid and is a damn good fisherman himself. I recommend Hammerhead guide service to all my friends and family."</p>
+                        <div class="bottom-section">
+                            <span class="author">Chris Sattler</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                    <div class="review-wrapper">
+                        <p class="cs-text">"Highly (quietly) recommend this duo for a fishing trip filled with laughs and memories to last a lifetime! Thank you Jason (and Charlie) for your dedication, professionalism and all around great times on the coast!!"</p>
+                        <div class="bottom-section">
+                            <span class="author">Dustin Settle</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                    <div class="review-wrapper">
+                        <p class="cs-text">"We met Jason and his son Charlie today for a fishing trip on the Columbia River  in Oregon.   Two of the nicest people you will ever run into. They went above and beyond to make sure we had a great experience.  And we did catch fish. Hope to see you again in the future captain Jason.  You to Charlie.  Dave and Linda."</p>
+                        <div class="bottom-section">
+                            <span class="author">Linda Trautman</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="review-wrapper">
+                        <p class="cs-text">"Jason and his son Charlie set the standard for what you should expect from a guide service. They bring the “family atmosphere” along with their extensive knowledge of fishing this area and all together it made for quite an awesome trip... Definitely exceeded the expectations and we will hopefully be going out with them again in the future."</p>
+                        <div class="bottom-section">
+                            <span class="author">Justin Maly</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                    <div class="review-wrapper">
+                        <p class="cs-text">"We go with Jason at Hammerhead Charters and no guide does it better. We limited out with 8 spring chinook and a dozen Dungeness crab. Professional service. Amazeballs!"</p>
+                        <div class="bottom-section">
+                            <span class="author">Christopher Beeman</span>
+                            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

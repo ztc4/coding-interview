@@ -1,0 +1,48 @@
+/*-- -------------------------- -->
+<---      salmon-hero           -->
+<--- -------------------------- -*/
+#salmon-hero .Section_top .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#salmon-overview{
+
+    .image-group {
+        width: calc(730 / 16 * 1em);
+        height: calc(561 / 16 * 1em);
+
+        .cs-picture1 {
+            width: calc(730 / 16 * 1em);
+            height: calc(561 / 16 * 1em);
+        }
+    }
+}
+
+
+#salmon-location{
+
+    .image-group {
+        width: calc(598 / 16 * 1em);
+        height: calc(536 / 16 * 1em);
+
+        .cs-picture1 {
+            width: calc(598 / 16 * 1em);
+            height: calc(536 / 16 * 1em);
+        }
+    }
+}
+
+#salmon-bring{
+
+    .image-group {
+        width: calc(747 / 16 * 1em);
+        height: calc(690 / 16 * 1em);
+
+        .cs-picture1 {
+            width: calc(747 / 16 * 1em);
+            height: calc(690 / 16 * 1em);
+        }
+    }
+}

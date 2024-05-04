@@ -1,0 +1,75 @@
+---
+title: 'Nehalem Bay Salmon Fishing | Hammerhead Fishing Guide'
+description: 'Dive into the exhilarating world of Salmon fishing in Nehalem Bay with Hammerhead Guide Service. Experience tailored trips during Summer and Fall, promising both adventure and a bountiful catch.'
+preloadImg: ''
+permalink: 'salmon/' 
+eleventyNavigation:
+    key: Salmon
+    parent: Services
+    order: 400
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/css/salmon.css">
+    <link rel="stylesheet" href="/css/services.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                salmon-hero                     -->
+    <!-- ============================================ -->
+    <section id="salmon-hero" class="services-hero">
+        <div class="Section_top">
+            <picture>
+                <source srcset="/assets/images/salmon-hero.webp" type="image/webp">
+                <img src="/assets/images/salmon-hero.jpg" alt="Nehalem Bay Salmon Fishing" class="hero-image">
+            </picture>
+            <div class="tint"></div>
+            <div class="content">
+                <h1 class="cs-hero-title">
+                    Nehalem Bay<br><span class="second-line">Salmon Fishing</span>
+                </h1>
+                <p class="cs-text">Dive into the vibrant world of Salmon fishing in Nehalem Bay, where seasoned anglers and beginners alike come together for an unforgettable experience with Hammerhead Guide Service.</p>
+                <div class="two-buttons">
+                    <a href="/contact/" class="button-solid">Contact Us</a>
+                    <a href="#price-section" class="button-solid price-btn">Pricing</a>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Get the button with the class "price-btn"
+            const button = document.querySelector('.price-btn');
+
+            if (button) {
+                // Add a click event listener to the button
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent the default button behavior
+                    const targetId = button.getAttribute('href'); // Get the target section id
+
+                    // Get the target section element
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Calculate the offset by subtracting the desired offset value (in pixels)
+                        // from the element's offsetTop
+                        const offset = targetElement.offsetTop - 50; // Replace 'yourOffsetValue' with the desired offset value
+
+                        // Scroll smoothly to the target section with the offset
+                        window.scrollTo({
+                            top: offset,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+
+
+{% endblock %}

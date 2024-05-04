@@ -1,0 +1,14 @@
+{
+	"name": "Hammerhead Guide Service",
+	"email": "hammerheadfishing@outlook.com",
+	"phoneForTel": "503-449-1730",
+	"phoneFormatted": "(503) 449-1730",
+	"address": {
+		"lineOne": "37000 Tohl Ranch Rd",
+		"city": "Nehalem",
+		"state": "OR",
+		"zip": "97131",
+		"mapLink": "https://goo.gl/maps/dpYW2bEFi4fmxJjT6"
+	},
+	"domain": "www.hammerheadfishing.com"
+}

@@ -1,0 +1,490 @@
+/* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
+
+/*-- -------------------------- -->
+<---        About               -->
+<--- -------------------------- -*/
+
+#about {
+
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .text-content {
+        max-width: 700px;
+    }
+
+    .image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+        font-size: min(2vw, .8em);
+        width: calc(779 / 16 * 1em);
+        height: calc(542 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        .cs-picture {
+            position: absolute;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+            }
+        }
+        .cs-picture1 {
+            width: calc(779 / 16 * 1em);
+            height: calc(542 / 16 * 1em);
+            top: 0;
+            left: 0;
+        }
+    
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #about {
+
+        .cs-container {
+            flex-direction: row;
+        }
+
+        .image-group {
+            /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+            font-size: min(0.8vw, .8em);
+        }
+
+        .text-content {
+            max-width: 500px;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---        services               -->
+<--- -------------------------- -*/
+
+#services {
+
+    .cs-container {
+        max-width: 1245px;
+    }
+
+    .cs-title {
+        text-align: center;
+    }
+    .navbar {
+        border-radius: 61px;
+        background: rgba(37, 8, 45, 0.10);
+        color: white;
+        margin-bottom: 25px;
+    }
+
+    .text-content {
+        max-width: 700px;
+    }
+    
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0;
+    }
+    
+    .service-link {
+        text-decoration: none;
+        color: #000000;
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+    
+    .service {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .service h2 {
+        color: #333;
+    }
+    
+    .service button {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    .service button:hover {
+        background-color: #555;
+    }
+
+    a.active {
+        border-radius: 55px;
+        background: #049A4B;
+        color: #fff;
+    }
+
+    .image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+        font-size: min(0.8vw, .8em);
+        width: calc(692 / 16 * 1em);
+        height: calc(672 / 16 * 1em);
+        display: none;
+        position: relative;
+        z-index: 1;
+
+        .cs-picture {
+            position: absolute;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+            }
+        }
+        .cs-picture1 {
+            width: calc(692 / 16 * 1em);
+            height: calc(672 / 16 * 1em);
+            top: 0;
+            left: 0;
+        }
+    }
+
+    #salmon {
+        .image-group {
+            width: calc(720 / 16 * 1em);
+            height: calc(693 / 16 * 1em);
+            .cs-picture1 {
+                width: calc(720 / 16 * 1em);
+                height: calc(693 / 16 * 1em);
+            }
+        }
+    }
+    #sturgeon {
+        .image-group {
+            width: calc(689 / 16 * 1em);
+            height: calc(850 / 16 * 1em);
+            .cs-picture1 {
+                width: calc(689 / 16 * 1em);
+                height: calc(850 / 16 * 1em);
+            }
+        }
+    }
+    #bottom-fish {
+        .image-group {
+            width: calc(681 / 16 * 1em);
+            height: calc(850 / 16 * 1em);
+            .cs-picture1 {
+                width: calc(681 / 16 * 1em);
+                height: calc(850 / 16 * 1em);
+            }
+        }
+    }
+    #steelhead {
+        .image-group {
+            font-size: min(0.8vw, .5em);
+            width: calc(599 / 16 * 1em);
+            height: calc(787 / 16 * 1em);
+            .cs-picture1 {
+                width: calc(599 / 16 * 1em);
+                height: calc(787 / 16 * 1em);
+            }
+        }
+    }
+    #crabbing {
+        .image-group {
+            width: calc(689 / 16 * 1em);
+            height: calc(850 / 16 * 1em);
+            .cs-picture1 {
+                width: calc(689 / 16 * 1em);
+                height: calc(850 / 16 * 1em);
+            }
+        }
+    }
+    #shad {
+        .image-group {
+            width: calc(681 / 16 * 1em);
+            height: calc(850 / 16 * 1em);
+            .cs-picture1 {
+                width: calc(681 / 16 * 1em);
+                height: calc(850 / 16 * 1em);
+            }
+        }
+    }
+    
+}
+
+/* Add a media query for screens with a maximum width of 768px (adjust as needed) */
+@media screen and (max-width: 768px) {
+    #services {
+        .navbar {
+            background: none;
+            border-radius: 0px;
+            display: flex; 
+            flex-direction: column; /* Display the rows vertically on mobile */
+            align-items: center; /* Center-align rows horizontally */
+            gap: 10px;
+        }
+
+        .navbar-row {
+            display: flex;
+            justify-content: space-around;
+            width: 350px;
+            gap: 5px;
+        }
+        
+        .service-link {
+            flex: 1; /* Distribute links evenly within each row */
+            max-width: 33%; /* Make sure each row contains only 3 links */
+            text-align: center; /* Center-align text within each link */
+            border-radius: 61px;
+            background: rgba(37, 8, 45, 0.10);
+            padding: 5px 0px;
+        }
+
+        .service-link.active {
+            background: #049A4B !important;
+        }
+
+    }
+}
+    
+/* Add a media query for screens with a minimum width of 769px (adjust as needed) */
+@media screen and (min-width: 769px) {
+    #services {
+        .cs-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex; 
+            flex-direction: row; /* Display the links in a single row on larger screens */
+            justify-content: center; /* Center-align links horizontally */
+            padding: 20px 0;
+            width: 100%;
+            max-width: 746px;
+            align-self: center;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+/* Add a media query for screens with a minimum width of 769px (adjust as needed) */
+@media screen and (min-width: 1024px) {
+    #services {
+
+        .service {
+            flex-direction: row;
+            align-items: start;
+        }
+        .service-link {
+            font-size: 20px;
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 850px;
+            margin-bottom: 60px;
+        }
+
+        .image-group {
+            /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+            display: block;
+        }
+
+        .text-content {
+            max-width: 500px;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---         family               -->
+<--- -------------------------- -*/
+
+#family-friendly {
+
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .text-content {
+        max-width: 700px;
+    }
+
+    .image-group {
+        /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+        font-size: min(2vw, .8em);
+        width: calc(692 / 16 * 1em);
+        height: calc(672 / 16 * 1em);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        .cs-picture {
+            position: absolute;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+            }
+        }
+        .cs-picture1 {
+            width: calc(692 / 16 * 1em);
+            height: calc(672 / 16 * 1em);
+            top: 0;
+            left: 0;
+        }
+    
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #family-friendly {
+
+        .cs-container {
+            flex-direction: row;
+        }
+
+        .image-group {
+            /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+            font-size: min(0.8vw, .8em);
+        }
+
+        .text-content {
+            max-width: 500px;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---         Youtube               -->
+<--- -------------------------- -*/
+#youtube {
+    .cs-container  {
+    }
+    .cs-title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .video-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    #youtube {
+        .video-wrapper {
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---         reviews               -->
+<--- -------------------------- -*/
+#reviews {
+    background-color: #E9E6EA;
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cs-text.sub-heading {
+        font-size: 20px;
+    }
+
+    .bottom-reviews {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
+    }
+
+    .cs-text {
+        font-size: 16px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 45px;
+    }
+
+    .review-wrapper {
+        border-left: 1px solid rgba(0, 0, 0, 0.36);
+        padding-left: 18px;
+        max-width: 450px;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bottom-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .author {
+        color: var(--secondary);
+        font-family: 'Poppins', Arial, sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    #reviews {
+        .row {
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .bottom-reviews {
+            margin-top: 30px;
+            gap: 100px;
+        }
+    }
+    
+
+}

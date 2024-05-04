@@ -1,0 +1,132 @@
+/* STYLES FOR ABOVE THE FOLD */
+
+/*-- -------------------------- -->
+<---         home-hero         -->
+<--- -------------------------- -*/
+
+#home-wrapper {
+    height: 800px;
+    .Section_top{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        justify-content: center;
+        animation: change 40s infinite ease-in-out;
+    }
+    
+    .tint {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+    }
+    .Section_top::before {
+        content: "";
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        max-width: 1156px;
+        height: 60%;
+        background: rgba(0, 0, 0, 0.6);
+        filter: blur(60px); 
+        z-index: 2;
+    }
+    
+    .content {
+        padding-top: 100px;
+        padding-left: 16px;
+        padding-right: 16px;
+        max-width: 1200px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        .cs-text {
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+    
+    .slideshow-container {
+        position: relative;
+        margin: auto;
+        height: 100%;
+        width: auto;
+
+    }
+    
+    .slide {
+        position: relative; /* If needed */
+        height: 100%; /* This will make the slide fill the container */
+    }
+    
+    .slide img {
+        width: 100%; /* This will make the image responsive */
+        height: auto; /* This maintains the aspect ratio */
+        min-height: 100%; /* Ensure that the image covers the slide’s height */
+        object-fit: cover; /* Ensures the image covers the full area */
+    }
+    
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+}
+
+
+
+@media only screen and (min-width: 700px) {
+
+    #home-wrapper {
+        .content {
+            padding-top: 20px;
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    #home-wrapper {
+        height: 800px;
+        .content {
+            padding-top: 0px;
+        }
+
+        .Section_top::before {
+            top: 50%;
+            left: 50%;
+            width: 70%;
+            height: 70%;
+            border-radius: 50%;
+        }
+    }
+
+}

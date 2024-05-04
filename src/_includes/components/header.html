@@ -1,0 +1,105 @@
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<!-- ============================================ -->
+<!--                 BANNER                      -->
+<!-- ============================================ -->
+<div id="banner">
+    <div class="mh-rating">
+        <div class="rated-img">
+            <img decoding="async" src="/assets/images/banner-1.png" alt="top-employees" width="55" height="55">
+            <img decoding="async" src="/assets/images/banner-2.png" alt="top-employees" width="55" height="55">
+            <img decoding="async" src="/assets/images/banner-3.png" alt="top-employees" width="55" height="55">
+        </div>
+        <a href="{{client.address.mapLink}}" class="rated-data" target="_blank">
+            <img decoding="async" src="/assets/svgs/five-stars.svg" alt="five stars" width="120" height="20">
+            <p>45+ 5 Star Reviews</p>
+        </a>
+    </div>
+    <div class="mh-social">
+        <a href="https://www.facebook.com/hammerheadfishing" class="facebook-icon-header" target="_blank" >
+            <img decoding="async" src="/assets/svgs/fb-logo.svg" alt="facebook" width="38" height="38">
+        </a>
+        <a href="https://www.facebook.com/hammerheadfishing" class="likes-header" target="_blank" >
+            <img decoding="async" src="/assets/svgs/fb-thumbs-up.svg" alt="facebook" width="20" height="20">
+        </a>
+        1.6k+ followers
+    </div>
+    <div class="mh-contact">
+        <a href="tel:{{client.phoneForTel}}" class="custom-btn">
+            <img decoding="async" src="/assets/svgs/phone.svg" aria-hidden="true" alt="phone" width="27" height="26">
+            {{client.phoneFormatted}}
+        </a>
+    </div>
+</div>
+
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="/" class="cs-logo" aria-label="back to home">
+            <img src="/assets/images/logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <!-- This also allows for easy substitution of CodeStitch navigations. Just replace the .cs-ul-wrapper in the new navigation with this one -->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    {% set navPages = collections.all | eleventyNavigation %}
+                    <!-- Loop through all pages with a eleventyNavigation in the frontmatter -->
+                    {% for entry in navPages %}
+                        <!-- Define a hasChild variable to make it easier to test what links are dropdowns-->
+                        {% set hasChild = entry.children.length %}
+
+                        <!-- If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes-->
+                        <li class="cs-li {% if hasChild %} cs-dropdown {% endif %}{% if entry.url == '/contact/' %}contact-li{% endif %}" {% if hasChild %} tabindex="0"{% endif %}>
+
+                            
+                            <!-- Colin added this if else (and the if code), if drop down make it a span so the drop down isn't linkn-->
+                            {% if hasChild %}
+                            <!-- Similarly, if the link is active, apply the necessary classes -->
+                            <span class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                                {{ entry.key }}
+                                {% if hasChild %}
+                                    <img class="cs-drop-icon" src="/assets/svgs/down-1.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                                {% endif %}
+                            </span>
+                            <!-- if it isn't a drop down then make it a link -->
+                            {% else %}
+                            <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}">
+                                {{ entry.key }}
+                                {% if hasChild %}
+                                    <img class="cs-drop-icon" src="/assets/svgs/down-1.svg" alt="dropdown icon" width="24" height="24" decoding="async" aria-hidden="true">
+                                {% endif %}
+                            </a>
+                            {% endif %}
+
+                            <!-- Dropdowns have another ul/li set up within the parent li. Render in the same way as a normal link -->
+                            {% if hasChild %}
+                                <ul class="cs-drop-ul">
+                                    {% for child in entry.children %}
+                                        <li class="cs-drop-li">
+                                            <a href="{{ child.url }}" class="cs-li-link cs-drop-link">{{ child.key }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+        <a href="/contact/" class="button-solid">Book Now</a>
+    </div>
+</header>
+                                                     
