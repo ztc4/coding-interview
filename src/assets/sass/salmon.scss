@@ -1,48 +1,129 @@
+$purple: #25082d;
+
 /*-- -------------------------- -->
 <---      salmon-hero           -->
 <--- -------------------------- -*/
 #salmon-hero .Section_top .hero-image {
-    width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#salmon-overview {
+  display: flex;
+  flex-direction: row;
+  flex-grow: fit;
+  justify-content: center;
+  .image-group {
+    width: calc(730 / 16 * 1em);
+    height: calc(561 / 16 * 1em);
+  }
+
+
+}
+
+#salmon-location {
+  .image-group {
+    width: calc(598 / 16 * 1em);
+    height: calc(536 / 16 * 1em);
+
+    .cs-picture1 {
+      width: calc(598 / 16 * 1em);
+      height: calc(536 / 16 * 1em);
+    }
+  }
+}
+
+#salmon-bring {
+  .image-group {
+    width: calc(747 / 16 * 1em);
+    height: calc(690 / 16 * 1em);
+
+    .cs-picture1 {
+      width: calc(747 / 16 * 1em);
+      height: calc(690 / 16 * 1em);
+    }
+  }
+}
+
+#booking {
+  background-color: $purple;
+  height: 300px;
+  width: 100%;
+  border-radius: 27px;
+  display: flex;
+  background-image: url("/assets/images/bg-interview.png");
+  background-position: 100px;
+  background-repeat: no-repeat;
+
+  align-items: center;
+  justify-content: space-between;
+
+  .text-content {
+    flex-shrink: 0;
+    margin-left: 40px;
+
+    .cs-sub-title {
+      color: white;
+    }
+    .cs-text {
+      color: white;
+      font-size: 20px;
+      font-weight: medium;
+    }
+  }
+}
+
+#packages {
+  background-color: rgba(217, 217, 217, 0.36);
+
+  border-radius: 20px;
+  display: flex;
+  flex-flow: row;
+  // width: 100%;
+  padding: 50px;
+  gap: 15px;
+  justify-content: center;
+  height: 315px;
+
+  .package-item {
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+    flex-flow: column;
     height: 100%;
-    object-fit: cover;
+    border-radius: 25px;
+    background-color: white;
+    .length {
+    }
+    .length2 {
+      color: white;
+    }
+    .price {
+      font-size: 40px;
+      span {
+        font-size: 14px;
+        color: black;
+        font-family: "quicksand";
+        text-transform: lowercase;
+      }
+      .light {
+        color: white;
+      }
+    }
+    .sub-text {
+    }
+    .sub-text2 {
+      color: white;
+    }
+  }
+}
+.cs-title {
+  span {
+    color: #049a4b;
+  }
 }
 
-#salmon-overview{
-
-    .image-group {
-        width: calc(730 / 16 * 1em);
-        height: calc(561 / 16 * 1em);
-
-        .cs-picture1 {
-            width: calc(730 / 16 * 1em);
-            height: calc(561 / 16 * 1em);
-        }
-    }
-}
-
-
-#salmon-location{
-
-    .image-group {
-        width: calc(598 / 16 * 1em);
-        height: calc(536 / 16 * 1em);
-
-        .cs-picture1 {
-            width: calc(598 / 16 * 1em);
-            height: calc(536 / 16 * 1em);
-        }
-    }
-}
-
-#salmon-bring{
-
-    .image-group {
-        width: calc(747 / 16 * 1em);
-        height: calc(690 / 16 * 1em);
-
-        .cs-picture1 {
-            width: calc(747 / 16 * 1em);
-            height: calc(690 / 16 * 1em);
-        }
-    }
+.green {
+  color: #049a4b;
 }
