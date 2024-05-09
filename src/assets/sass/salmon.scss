@@ -14,13 +14,112 @@ $purple: #25082d;
   flex-direction: row;
   flex-grow: fit;
   justify-content: center;
-  .image-group {
-    width: calc(730 / 16 * 1em);
-    height: calc(561 / 16 * 1em);
+  .cs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
-
-
+  
+  .text-content {
+    max-width: 700px;
+    padding: 0px 10px;
+    .list{
+      list-style-type: none;
+    }
+    .list li::before {
+      content: "•"; /* Use a custom bullet point (in this case, a black dot) */
+      color: #049A4B; /* Set the bullet point color to green */
+      font-size: 25px; /* Adjust the bullet point size */
+      margin-right: 8px; /* Add spacing between the bullet point and text */
+    }
+  }
+  
+  .image-group {
+    /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+    font-size: min(2vw, .8em);
+    width: calc(779 / 16 * 1em);
+    height: calc(542 / 16 * 1em);
+    display: block;
+    position: relative;
+    z-index: 1;
+    gap: 8px;
+  
+    .cs-picture {
+        position: absolute;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            overflow: visible;
+        }
+    }
+    .cs-picture1 {
+        width: calc(779 / 16 * 1em);
+        height: calc(542 / 16 * 1em);
+        top: 0;
+        left: 0;
+    }
+  
+  }
 }
+@media only screen and (max-width: 1024px) {
+  #salmon-overview {
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+    .cs-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .text-content {
+      max-width: 700px;
+    }
+    
+    .image-group {
+      /* scales the whole group based on the view width size and stop when that vales equals .8em, resets at desktop */
+      font-size: min(2vw, .8em);
+      width: calc(779 / 16 * 1em);
+      height: calc(542 / 16 * 1em);
+      display: block;
+      position: relative;
+      z-index: 1;
+      gap: 8px;
+    
+      .cs-picture {
+          
+          img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              position: auto;
+              top: 0;
+              left: 150px;
+              display: relative;
+              overflow: visible;
+          }
+      }
+      .cs-picture1 {
+          width: calc(300 / 16 * 1em);
+          height: calc(542 / 16 * 1em);
+          top: 0;
+          left: 0;
+      }
+    
+    }
+  }
+}
+
 
 #salmon-location {
   .image-group {
@@ -60,7 +159,7 @@ $purple: #25082d;
   justify-content: space-between;
 
   .text-content {
-    flex-shrink: 0;
+    
     margin-left: 40px;
 
     .cs-sub-title {
@@ -95,6 +194,10 @@ $purple: #25082d;
     border-radius: 25px;
     background-color: white;
     .length {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "Quicksand";
+      color: #145FA4;
     }
     .length2 {
       color: white;
@@ -118,6 +221,21 @@ $purple: #25082d;
     }
   }
 }
+@media only screen and (max-width: 1024px) {
+  #booking{
+    background-position: 0px;
+  }
+  #packages{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    .package-item {
+      padding: 20px 20px;
+    }
+  }
+
+}
+
 .cs-title {
   span {
     color: #049a4b;
